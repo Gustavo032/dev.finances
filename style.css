@@ -19,7 +19,7 @@ body{
     margin: auto;
 }
 
-/* Titles ---------------- */
+/* TITLES ---------------- */
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
@@ -54,11 +54,12 @@ header {
 /* CARDS ----------------- */
 .card {
     background-color: #fff;
-    padding: 1.5rem 2rem;
+    color: var(--dark-blue);
+
     border-radius: 0.25rem;
+    padding: 1.5rem 2rem;
     margin-bottom: 2rem;
 
-    color: var(--dark-blue);
 }
 
 .card h3 {
@@ -78,29 +79,24 @@ header {
 }
 
 /* TABLE =---------------- */
-#transactions {
-
-}
-
 #data-table{
     width: 100%;
     border-spacing: 0 0.5rem;
-    background-color: #969cb3;
+    color: #969cb3;
 }
 
-table th {
-    background-color: white;
-    opacity: 0.6;
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
 
+table thead th {
+    background-color: white;
+    
     font-weight: normal;
     padding: 1rem, 2rem;
-    text-align: left;
-    padding: 1rem, 2rem;
-}
 
-table td {
-    background-color: white;
-    padding: 1rem, 2rem;
+    text-align: left;
 }
 
 table tbody tr {
@@ -111,10 +107,11 @@ table tbody tr:hover {
     opacity: 1;
 }
 
-table thead tr th:first-child,
-table tbody tr td:first-child{
-    border-radius: 0.25rem 0 0 0.25rem;
+table td {
+    background-color: white;
+    padding: 1rem, 2rem;
 }
+
 
 td description {
     color: var(--dark-blue);
