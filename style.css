@@ -9,13 +9,28 @@
     box-sizing: border-box;
 }
 
-body{
+html {
+    font-size: 93.75%; /* 15px */
+}
+
+body {
     background-color: #f0f2f5;
     font-family: 'Poppins', sans-serif;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0 ;
+}
+
 .container {
-    max-width: min(90vw, 800px);
+    width: min(90vw, 800px);
     margin: auto;
 }
 
@@ -28,6 +43,23 @@ h2{
     font-weight: normal;
 }
 
+/* LINKS & BUTTONS -------- */
+a{
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+    
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+
 /* HEADER ---------------- */
 header {
     background-color: #2d4a22;
@@ -38,7 +70,6 @@ header {
 #logo {
     color: #fff;
     font-weight: 100;
-
 }
 
 /* BALANCE ---------------- */
@@ -65,11 +96,16 @@ header {
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p {
     font-size: 2rem;
     line-height: 3rem;
+
     margin-top: 1rem;
 }
 
@@ -79,6 +115,12 @@ header {
 }
 
 /* TABLE =---------------- */
+#transactions {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 #data-table{
     width: 100%;
     border-spacing: 0 0.5rem;
@@ -90,6 +132,10 @@ table tbody tr td:first-child{
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
 table thead th {
     background-color: white;
     
@@ -109,7 +155,7 @@ table tbody tr:hover {
 
 table td {
     background-color: white;
-    padding: 1rem, 2rem;
+    padding: 1rem 2rem;
 }
 
 
@@ -125,10 +171,55 @@ td.expense {
     color: #e92929
 }
 
+/* MODAL  ---------------- */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {    
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+}
+
 /* FOOTER ---------------- */
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
     color:  var(--dark-blue);
+
     opacity: 0.6
 }
+
+/* Responsive */
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%; /* 14px */
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+} 
+
+
