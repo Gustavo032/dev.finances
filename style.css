@@ -1,4 +1,6 @@
-/* GERAL  ---------------- */
+/* -------- GERAL  -------- */
+
+
 :root{
     --dark-blue: #363f5f;
     --green: #49aa26;
@@ -27,8 +29,8 @@ body {
     height: 1px;
     padding: 0;
     margin: -1px;
-    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
     border-width: 0 ;
 }
 
@@ -37,7 +39,7 @@ body {
     margin: auto;
 }
 
-/* TITLES ---------------- */
+/* -------- TITLES -------- */
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
@@ -46,7 +48,10 @@ h2{
     font-weight: normal;
 }
 
-/* LINKS & BUTTONS -------- */
+
+/* -------- LINKS & BUTTONS -------- */
+
+
 a {
     color: var(--green);
     text-decoration: none;
@@ -94,7 +99,10 @@ button:hover{
     opacity: 1;
 }
 
-/* HEADER ---------------- */
+
+/* -------- HEADER -------- */
+
+
 header {
     background-color: #2d4a22;
     padding: 2rem 0 10rem; 
@@ -106,7 +114,10 @@ header {
     font-weight: 100;
 }
 
-/* BALANCE ---------------- */
+
+/* -------- BALANCE -------- */
+
+
 #balance{
     margin-top: -8rem;
 }
@@ -116,7 +127,10 @@ header {
     margin-top: 0;
 }
 
-/* CARDS ----------------- */
+
+/* -------- CARDS -------- */
+
+
 .card {
     background-color: #fff;
     color: var(--dark-blue);
@@ -148,7 +162,10 @@ header {
     color: white
 }
 
-/* TABLE =---------------- */
+
+/* -------- TABLE -------- */
+
+
 #transactions {
     display: block;
     width: 100%;
@@ -205,7 +222,7 @@ td.expense {
     color: #e92929
 }
 
-/* MODAL  ---------------- */
+/* -------- MODAL -------- */
 
 .modal-overlay {
     width: 100%;
@@ -237,7 +254,9 @@ td.expense {
 }
 
 
-/* FORM  ------------------ */
+/* -------- FORM  -------- */
+
+
 #form {
     max-width: 500px;
 }
@@ -271,7 +290,10 @@ form input {
     width: 48%;
 }
 
-/* FOOTER ---------------- */
+
+/* -------- FOOTER -------- */
+
+
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
@@ -280,7 +302,10 @@ footer {
     opacity: 0.6
 }
 
-/* Responsive */
+
+/* -------- Responsive -------- */
+
+
 @media (min-width: 800px) {
     html {
         font-size: 87.5%; /* 14px */
