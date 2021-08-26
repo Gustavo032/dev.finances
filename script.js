@@ -41,17 +41,41 @@ const transactions = [
 ]
 
 const Transaction = {
+    all: transactions,
     income (){
         // somar as entradas
+        incomes = 0;
+        // para cada transação
+        transactions.forEach((transaction) => {
+            // se maior do que zero
+            if( transaction.amount > 0 ) {
+                // somar a uma variavel e retornar a variavel
+                incomes += transaction.amount;
+            }
+        })
+
+        return incomes;
     },
 
     expense (){
         // somar as saídas
+        expenses = 0;
+        // para cada transação
+        transactions.forEach(transaction => {
+            // se menor do que zero
+            if( transaction.amount < 0 ) {
+                // somar a uma variavel e retornar a variavel
+                expenses += transaction.amount;
+            }
+        })
+
+        return expenses;
     },
 
     total (){
-        // entradas - saídas
-    }
+        // + com - é -
+        return Transaction.income() + Transaction.expense();
+    },
 }
 
 const DOM = {
@@ -78,6 +102,12 @@ const DOM = {
             </td>
             `
             return html
+        },
+
+        updateBalance(){
+            document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.income())
+            document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expense())
+            document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total())
         }
 }
 
@@ -101,3 +131,5 @@ const Utils = {
 transactions.forEach(function(transaction) {
     DOM.addTransaction(transaction)
 })
+
+DOM.updateBalance()
