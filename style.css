@@ -209,6 +209,9 @@ table td {
     padding: 1rem 2rem;
 }
 
+table td img{
+    cursor: pointer;
+}
 
 td description {
     color: var(--dark-blue);
@@ -244,6 +247,7 @@ td.expense {
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
+    padding: 0 10px;
 }
 
 .modal {    
@@ -298,7 +302,6 @@ footer {
     text-align: center;
     padding: 4rem 0 2rem;
     color:  var(--dark-blue);
-
     opacity: 0.6
 }
 
@@ -317,7 +320,10 @@ footer {
         gap: 2rem;
     }
 
-
+    .modal-overlay.active {
+        padding: 0;
+    }
+    
 } 
 
 
